@@ -237,13 +237,13 @@
   .elemento {
     display: flex;
     align-items: center;
-    gap: 24px;
-    padding: 28px 26px;
+    gap: 16px;
+    padding: 18px 18px;
     background: var(--bg-item);
     border: 1px solid transparent;
     border-radius: var(--radius-md);
     transition: transform 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
-    min-height: 170px;
+    min-height: 108px;
   }
 
   .elemento:hover {
@@ -259,15 +259,15 @@
   .checkbox-label {
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 12px;
     flex: 1;
     min-width: 0;
     cursor: pointer;
   }
 
   .checkbox-label input[type="checkbox"] {
-    width: 40px;
-    height: 40px;
+    width: 24px;
+    height: 24px;
     accent-color: var(--primary);
     cursor: pointer;
     flex-shrink: 0;
@@ -275,8 +275,8 @@
 
   .nome-elemento {
     overflow-wrap: anywhere;
-    font-size: 1.6rem;
-    line-height: 1.4;
+    font-size: 1.12rem;
+    line-height: 1.35;
   }
 
   .elemento.selezionato .nome-elemento {
@@ -287,7 +287,7 @@
   .elemento-primario {
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 12px;
     flex: 1;
     min-width: 0;
   }
@@ -296,13 +296,13 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 72px;
-    min-height: 72px;
+    min-width: 44px;
+    min-height: 44px;
     border-radius: 10px;
     border: 1px dashed rgba(32, 48, 64, 0.18);
     background: rgba(255, 255, 255, 0.78);
     color: var(--text-soft);
-    font-size: 1.75rem;
+    font-size: 1.1rem;
     font-weight: 700;
     cursor: grab;
     user-select: none;
@@ -393,13 +393,13 @@
   }
 
   .bottone-icona {
-    min-width: 76px;
-    padding-inline: 18px;
+    min-width: 52px;
+    padding-inline: 14px;
   }
 
   .azioni-elemento .bottone {
-    min-height: 74px;
-    font-size: 1.05rem;
+    min-height: 54px;
+    font-size: 0.95rem;
   }
 
   .messaggio {
@@ -507,7 +507,7 @@
     }
 
     body {
-      font-size: 24px;
+      font-size: 20px;
     }
 
     .intestazione {
@@ -515,24 +515,24 @@
     }
 
     .intestazione h1 {
-      font-size: clamp(3.1rem, 11vw, 4rem);
+      font-size: clamp(2.6rem, 9vw, 3.4rem);
       line-height: 1.02;
     }
 
     .intestazione p {
-      font-size: 1.22rem;
-      line-height: 1.65;
+      font-size: 1.08rem;
+      line-height: 1.55;
     }
 
     .lista-header h2 {
-      font-size: 1.82rem;
+      font-size: 1.5rem;
     }
 
     .lista-meta,
     .messaggio,
     .messaggio-vuoto,
     .controllo-colore {
-      font-size: 1.14rem;
+      font-size: 1rem;
     }
 
     .crea-lista,
@@ -549,21 +549,21 @@
     }
 
     .input-testo {
-      min-height: 68px;
-      padding: 18px 20px;
-      font-size: 1.08rem;
+      min-height: 58px;
+      padding: 15px 17px;
+      font-size: 1rem;
       border-radius: 14px;
     }
 
     .bottone {
-      min-height: 66px;
-      padding: 16px 22px;
-      font-size: 1.08rem;
+      min-height: 56px;
+      padding: 13px 18px;
+      font-size: 1rem;
     }
 
     .checkbox-label input[type="checkbox"] {
-      width: 42px;
-      height: 42px;
+      width: 28px;
+      height: 28px;
     }
 
     .maniglia-drag {
@@ -573,20 +573,20 @@
     }
 
     .maniglia-elemento-drag {
-      min-width: 78px;
-      min-height: 78px;
-      font-size: 1.8rem;
+      min-width: 54px;
+      min-height: 54px;
+      font-size: 1.25rem;
     }
 
     .nome-elemento {
-      font-size: 1.75rem;
+      font-size: 1.28rem;
       line-height: 1.4;
     }
 
     .azioni-elemento .bottone {
-      min-height: 84px;
-      font-size: 1.2rem;
-      padding: 18px 24px;
+      min-height: 60px;
+      font-size: 1rem;
+      padding: 14px 18px;
     }
 
     .azioni-secondarie,
@@ -597,7 +597,7 @@
 
   @media (max-width: 480px) {
     body {
-      font-size: 26px;
+      font-size: 21px;
     }
 
     .pagina {
@@ -607,11 +607,11 @@
     }
 
     .intestazione h1 {
-      font-size: clamp(3.3rem, 13vw, 4.2rem);
+      font-size: clamp(2.8rem, 11vw, 3.5rem);
     }
 
     .intestazione p {
-      font-size: 1.26rem;
+      font-size: 1.1rem;
     }
 
     .strumenti,
@@ -628,12 +628,12 @@
       justify-content: space-between;
       width: 100%;
       padding: 12px 16px;
-      font-size: 1.08rem;
+      font-size: 0.98rem;
     }
 
     .input-colore {
-      width: 46px;
-      height: 46px;
+      width: 38px;
+      height: 38px;
     }
 
     .lista-header,
@@ -660,14 +660,14 @@
     .strumenti .bottone,
     .dialogo-azioni .bottone {
       width: 100%;
-      min-height: 72px;
+      min-height: 60px;
       justify-content: center;
     }
 
     .input-testo {
-      min-height: 74px;
-      padding: 20px 22px;
-      font-size: 1.12rem;
+      min-height: 62px;
+      padding: 16px 18px;
+      font-size: 1rem;
     }
 
     .aggiungi-elemento {
@@ -677,15 +677,15 @@
     .elemento {
       flex-direction: column;
       align-items: stretch;
-      padding: 38px 28px;
-      gap: 28px;
-      min-height: 240px;
+      padding: 24px 20px;
+      gap: 18px;
+      min-height: 150px;
     }
 
     .elemento-primario {
       width: 100%;
       align-items: flex-start;
-      gap: 20px;
+      gap: 14px;
     }
 
     .azioni-elemento {
@@ -698,11 +698,11 @@
 
     .checkbox-label {
       align-items: flex-start;
-      gap: 16px;
+      gap: 12px;
     }
 
     .nome-elemento {
-      font-size: 2rem;
+      font-size: 1.4rem;
       line-height: 1.45;
     }
 
@@ -712,20 +712,20 @@
     }
 
     .checkbox-label input[type="checkbox"] {
-      width: 46px;
-      height: 46px;
+      width: 30px;
+      height: 30px;
     }
 
     .maniglia-elemento-drag {
-      min-width: 86px;
-      min-height: 86px;
-      font-size: 1.95rem;
+      min-width: 58px;
+      min-height: 58px;
+      font-size: 1.35rem;
     }
 
     .azioni-elemento .bottone {
-      min-height: 92px;
-      font-size: 1.24rem;
-      padding: 20px 24px;
+      min-height: 64px;
+      font-size: 1rem;
+      padding: 14px 18px;
     }
   }
 </style>
