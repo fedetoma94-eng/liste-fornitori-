@@ -237,12 +237,13 @@
   .elemento {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 14px 16px;
+    gap: 24px;
+    padding: 28px 26px;
     background: var(--bg-item);
     border: 1px solid transparent;
     border-radius: var(--radius-md);
     transition: transform 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
+    min-height: 170px;
   }
 
   .elemento:hover {
@@ -258,15 +259,15 @@
   .checkbox-label {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 18px;
     flex: 1;
     min-width: 0;
     cursor: pointer;
   }
 
   .checkbox-label input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
+    width: 40px;
+    height: 40px;
     accent-color: var(--primary);
     cursor: pointer;
     flex-shrink: 0;
@@ -274,6 +275,8 @@
 
   .nome-elemento {
     overflow-wrap: anywhere;
+    font-size: 1.6rem;
+    line-height: 1.4;
   }
 
   .elemento.selezionato .nome-elemento {
@@ -284,7 +287,7 @@
   .elemento-primario {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 18px;
     flex: 1;
     min-width: 0;
   }
@@ -293,13 +296,13 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 34px;
-    min-height: 34px;
+    min-width: 72px;
+    min-height: 72px;
     border-radius: 10px;
     border: 1px dashed rgba(32, 48, 64, 0.18);
     background: rgba(255, 255, 255, 0.78);
     color: var(--text-soft);
-    font-size: 1rem;
+    font-size: 1.75rem;
     font-weight: 700;
     cursor: grab;
     user-select: none;
@@ -390,8 +393,13 @@
   }
 
   .bottone-icona {
-    min-width: 44px;
-    padding-inline: 12px;
+    min-width: 76px;
+    padding-inline: 18px;
+  }
+
+  .azioni-elemento .bottone {
+    min-height: 74px;
+    font-size: 1.05rem;
   }
 
   .messaggio {
