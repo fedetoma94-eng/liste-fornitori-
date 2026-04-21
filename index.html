@@ -456,9 +456,9 @@
 
   @media (max-width: 720px) {
     .pagina {
-      width: min(100% - 10px, 1100px);
-      padding-top: 10px;
-      padding-bottom: 22px;
+      width: calc(100% - 6px);
+      padding-top: 6px;
+      padding-bottom: 16px;
     }
 
     .crea-lista,
@@ -497,99 +497,100 @@
     }
 
     body {
-      font-size: 21px;
+      font-size: 24px;
     }
 
     .intestazione {
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
 
     .intestazione h1 {
-      font-size: clamp(2.7rem, 10vw, 3.5rem);
+      font-size: clamp(3.1rem, 11vw, 4rem);
       line-height: 1.02;
     }
 
     .intestazione p {
-      font-size: 1.14rem;
-      line-height: 1.6;
+      font-size: 1.22rem;
+      line-height: 1.65;
     }
 
     .lista-header h2 {
-      font-size: 1.6rem;
+      font-size: 1.82rem;
     }
 
     .lista-meta,
     .messaggio,
     .messaggio-vuoto,
     .controllo-colore {
-      font-size: 1.06rem;
+      font-size: 1.14rem;
     }
 
     .crea-lista,
     .lista-contenuto {
-      padding-top: 20px;
-      padding-bottom: 20px;
+      padding-top: 22px;
+      padding-bottom: 22px;
     }
 
     .lista-header,
     .lista-contenuto,
     .crea-lista {
-      padding-left: 20px;
-      padding-right: 20px;
+      padding-left: 22px;
+      padding-right: 22px;
     }
 
     .input-testo {
-      min-height: 60px;
-      padding: 16px 18px;
-      font-size: 1rem;
+      min-height: 68px;
+      padding: 18px 20px;
+      font-size: 1.08rem;
+      border-radius: 14px;
     }
 
     .bottone {
-      min-height: 58px;
-      padding: 14px 20px;
-      font-size: 1rem;
+      min-height: 66px;
+      padding: 16px 22px;
+      font-size: 1.08rem;
     }
 
     .checkbox-label input[type="checkbox"] {
-      width: 24px;
-      height: 24px;
+      width: 28px;
+      height: 28px;
     }
 
     .maniglia-drag {
-      min-width: 50px;
-      min-height: 50px;
-      font-size: 1.3rem;
+      min-width: 58px;
+      min-height: 58px;
+      font-size: 1.5rem;
     }
 
     .maniglia-elemento-drag {
-      min-width: 40px;
-      min-height: 40px;
-      font-size: 1.1rem;
+      min-width: 46px;
+      min-height: 46px;
+      font-size: 1.24rem;
     }
 
     .azioni-secondarie,
     .strumenti {
-      gap: 10px;
+      gap: 12px;
     }
   }
 
   @media (max-width: 480px) {
     body {
-      font-size: 22px;
+      font-size: 26px;
     }
 
     .pagina {
-      width: calc(100% - 8px);
-      padding-top: 8px;
-      padding-bottom: 18px;
+      width: calc(100% - 4px);
+      padding-top: 4px;
+      padding-bottom: 12px;
     }
 
     .intestazione h1 {
-      font-size: clamp(2.9rem, 12vw, 3.7rem);
+      font-size: clamp(3.3rem, 13vw, 4.2rem);
     }
 
     .intestazione p {
-      font-size: 1.18rem;
+      font-size: 1.26rem;
     }
 
     .strumenti,
@@ -605,31 +606,31 @@
     .controllo-colore {
       justify-content: space-between;
       width: 100%;
-      padding: 10px 14px;
-      font-size: 1rem;
+      padding: 12px 16px;
+      font-size: 1.08rem;
     }
 
     .input-colore {
-      width: 40px;
-      height: 40px;
+      width: 46px;
+      height: 46px;
     }
 
     .lista-header,
     .lista-contenuto,
     .crea-lista {
-      padding-left: 16px;
-      padding-right: 16px;
+      padding-left: 14px;
+      padding-right: 14px;
     }
 
     .lista-header {
-      padding-top: 18px;
-      padding-bottom: 14px;
+      padding-top: 20px;
+      padding-bottom: 16px;
     }
 
     .lista-contenuto,
     .crea-lista {
-      padding-top: 18px;
-      padding-bottom: 18px;
+      padding-top: 20px;
+      padding-bottom: 20px;
     }
 
     .bottone,
@@ -638,18 +639,25 @@
     .strumenti .bottone,
     .dialogo-azioni .bottone {
       width: 100%;
-      min-height: 60px;
+      min-height: 72px;
       justify-content: center;
     }
 
+    .input-testo {
+      min-height: 74px;
+      padding: 20px 22px;
+      font-size: 1.12rem;
+    }
+
     .aggiungi-elemento {
-      gap: 10px;
+      gap: 12px;
     }
 
     .elemento {
       flex-direction: column;
       align-items: stretch;
-      padding: 16px;
+      padding: 18px;
+      gap: 16px;
     }
 
     .elemento-primario {
@@ -667,6 +675,12 @@
 
     .checkbox-label {
       align-items: flex-start;
+      gap: 12px;
+    }
+
+    .nome-elemento {
+      font-size: 1.08rem;
+      line-height: 1.5;
     }
 
     .maniglia-drag,
