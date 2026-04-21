@@ -398,8 +398,12 @@
   }
 
   .azioni-elemento .bottone {
-    min-height: 46px;
-    font-size: 0.9rem;
+    min-width: 34px;
+    min-height: 34px;
+    padding: 6px;
+    font-size: 0.95rem;
+    line-height: 1;
+    border-radius: 10px;
   }
 
   .messaggio {
@@ -584,9 +588,10 @@
     }
 
     .azioni-elemento .bottone {
-      min-height: 50px;
-      font-size: 0.92rem;
-      padding: 10px 14px;
+      min-width: 36px;
+      min-height: 36px;
+      padding: 6px;
+      font-size: 1rem;
     }
 
     .azioni-secondarie,
@@ -723,9 +728,10 @@
     }
 
     .azioni-elemento .bottone {
-      min-height: 54px;
-      font-size: 0.92rem;
-      padding: 11px 14px;
+      min-width: 38px;
+      min-height: 38px;
+      padding: 6px;
+      font-size: 1rem;
     }
   }
 </style>
@@ -1199,13 +1205,13 @@
     azioni.className = "azioni-elemento";
     azioni.append(
       creaBottone(
-        "Modifica",
+        "✎",
         "bottone bottone-secondario bottone-icona",
         () => modEl(indiceLista, indiceElemento),
         `Modifica elemento ${elemento.nome}`
       ),
       creaBottone(
-        "Elimina",
+        "🗑",
         "bottone bottone-pericolo bottone-icona",
         () => delEl(indiceLista, indiceElemento),
         `Elimina elemento ${elemento.nome}`
