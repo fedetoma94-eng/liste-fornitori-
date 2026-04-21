@@ -1,0 +1,26 @@
+{
+  "name": "Liste Fornitori",
+  "short_name": "Fornitori",
+  "description": "Gestisci liste di fornitori e articoli con colori, riordino e backup JSON.",
+  "lang": "it",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#eef4f8",
+  "theme_color": "#1f6f8b",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
