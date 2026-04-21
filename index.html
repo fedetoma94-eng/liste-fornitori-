@@ -42,13 +42,13 @@
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     background: var(--bg-main);
     color: var(--text-main);
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .pagina {
     width: min(1100px, calc(100% - 24px));
     margin: 0 auto;
-    padding: 28px 0 44px;
+    padding: 22px 0 34px;
   }
 
   .intestazione {
@@ -57,15 +57,15 @@
 
   .intestazione h1 {
     margin: 0 0 8px;
-    font-size: clamp(2.3rem, 5vw, 3.4rem);
+    font-size: clamp(2rem, 4vw, 3rem);
     letter-spacing: -0.03em;
   }
 
   .intestazione p {
     margin: 0;
     color: var(--text-soft);
-    font-size: 1.08rem;
-    line-height: 1.55;
+    font-size: 1rem;
+    line-height: 1.45;
   }
 
   .crea-lista,
@@ -123,13 +123,13 @@
 
   .lista-header h2 {
     margin: 0;
-    font-size: 1.42rem;
+    font-size: 1.22rem;
   }
 
   .lista-meta {
     margin-top: 4px;
     color: var(--text-soft);
-    font-size: 1rem;
+    font-size: 0.92rem;
   }
 
   .lista-azioni,
@@ -237,13 +237,13 @@
   .elemento {
     display: flex;
     align-items: center;
-    gap: 16px;
-    padding: 18px 18px;
+    gap: 10px;
+    padding: 12px 12px;
     background: var(--bg-item);
     border: 1px solid transparent;
     border-radius: var(--radius-md);
     transition: transform 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
-    min-height: 108px;
+    min-height: 72px;
   }
 
   .elemento:hover {
@@ -259,15 +259,15 @@
   .checkbox-label {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
     flex: 1;
     min-width: 0;
     cursor: pointer;
   }
 
   .checkbox-label input[type="checkbox"] {
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 18px;
     accent-color: var(--primary);
     cursor: pointer;
     flex-shrink: 0;
@@ -275,8 +275,8 @@
 
   .nome-elemento {
     overflow-wrap: anywhere;
-    font-size: 1.12rem;
-    line-height: 1.35;
+    font-size: 1rem;
+    line-height: 1.3;
   }
 
   .elemento.selezionato .nome-elemento {
@@ -287,7 +287,7 @@
   .elemento-primario {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
     flex: 1;
     min-width: 0;
   }
@@ -296,13 +296,13 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 44px;
-    min-height: 44px;
+    min-width: 34px;
+    min-height: 34px;
     border-radius: 10px;
     border: 1px dashed rgba(32, 48, 64, 0.18);
     background: rgba(255, 255, 255, 0.78);
     color: var(--text-soft);
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     font-weight: 700;
     cursor: grab;
     user-select: none;
@@ -393,20 +393,20 @@
   }
 
   .bottone-icona {
-    min-width: 52px;
-    padding-inline: 14px;
+    min-width: 44px;
+    padding-inline: 12px;
   }
 
   .azioni-elemento .bottone {
-    min-height: 54px;
-    font-size: 0.95rem;
+    min-height: 46px;
+    font-size: 0.9rem;
   }
 
   .messaggio {
     min-height: 24px;
     margin: 14px 0 0;
     color: var(--primary-hover);
-    font-size: 1rem;
+    font-size: 0.92rem;
     font-weight: 600;
   }
 
@@ -507,7 +507,7 @@
     }
 
     body {
-      font-size: 20px;
+      font-size: 17px;
     }
 
     .intestazione {
@@ -515,24 +515,24 @@
     }
 
     .intestazione h1 {
-      font-size: clamp(2.6rem, 9vw, 3.4rem);
+      font-size: clamp(2.2rem, 8vw, 2.9rem);
       line-height: 1.02;
     }
 
     .intestazione p {
-      font-size: 1.08rem;
-      line-height: 1.55;
+      font-size: 0.98rem;
+      line-height: 1.45;
     }
 
     .lista-header h2 {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
     }
 
     .lista-meta,
     .messaggio,
     .messaggio-vuoto,
     .controllo-colore {
-      font-size: 1rem;
+      font-size: 0.92rem;
     }
 
     .crea-lista,
@@ -549,44 +549,44 @@
     }
 
     .input-testo {
-      min-height: 58px;
-      padding: 15px 17px;
-      font-size: 1rem;
+      min-height: 50px;
+      padding: 12px 14px;
+      font-size: 0.96rem;
       border-radius: 14px;
     }
 
     .bottone {
-      min-height: 56px;
-      padding: 13px 18px;
-      font-size: 1rem;
+      min-height: 48px;
+      padding: 11px 15px;
+      font-size: 0.95rem;
     }
 
     .checkbox-label input[type="checkbox"] {
-      width: 28px;
-      height: 28px;
+      width: 22px;
+      height: 22px;
     }
 
     .maniglia-drag {
-      min-width: 58px;
-      min-height: 58px;
-      font-size: 1.5rem;
+      min-width: 42px;
+      min-height: 42px;
+      font-size: 1.1rem;
     }
 
     .maniglia-elemento-drag {
-      min-width: 54px;
-      min-height: 54px;
-      font-size: 1.25rem;
+      min-width: 42px;
+      min-height: 42px;
+      font-size: 1rem;
     }
 
     .nome-elemento {
-      font-size: 1.28rem;
+      font-size: 1.08rem;
       line-height: 1.4;
     }
 
     .azioni-elemento .bottone {
-      min-height: 60px;
-      font-size: 1rem;
-      padding: 14px 18px;
+      min-height: 50px;
+      font-size: 0.92rem;
+      padding: 10px 14px;
     }
 
     .azioni-secondarie,
@@ -597,7 +597,7 @@
 
   @media (max-width: 480px) {
     body {
-      font-size: 21px;
+      font-size: 18px;
     }
 
     .pagina {
@@ -607,11 +607,11 @@
     }
 
     .intestazione h1 {
-      font-size: clamp(2.8rem, 11vw, 3.5rem);
+      font-size: clamp(2.4rem, 10vw, 3rem);
     }
 
     .intestazione p {
-      font-size: 1.1rem;
+      font-size: 0.98rem;
     }
 
     .strumenti,
@@ -628,12 +628,12 @@
       justify-content: space-between;
       width: 100%;
       padding: 12px 16px;
-      font-size: 0.98rem;
+      font-size: 0.9rem;
     }
 
     .input-colore {
-      width: 38px;
-      height: 38px;
+      width: 32px;
+      height: 32px;
     }
 
     .lista-header,
@@ -660,14 +660,14 @@
     .strumenti .bottone,
     .dialogo-azioni .bottone {
       width: 100%;
-      min-height: 60px;
+      min-height: 50px;
       justify-content: center;
     }
 
     .input-testo {
-      min-height: 62px;
-      padding: 16px 18px;
-      font-size: 1rem;
+      min-height: 54px;
+      padding: 13px 15px;
+      font-size: 0.95rem;
     }
 
     .aggiungi-elemento {
@@ -677,15 +677,15 @@
     .elemento {
       flex-direction: column;
       align-items: stretch;
-      padding: 24px 20px;
-      gap: 18px;
-      min-height: 150px;
+      padding: 18px 16px;
+      gap: 12px;
+      min-height: 110px;
     }
 
     .elemento-primario {
       width: 100%;
       align-items: flex-start;
-      gap: 14px;
+      gap: 10px;
     }
 
     .azioni-elemento {
@@ -698,12 +698,12 @@
 
     .checkbox-label {
       align-items: flex-start;
-      gap: 12px;
+      gap: 10px;
     }
 
     .nome-elemento {
-      font-size: 1.4rem;
-      line-height: 1.45;
+      font-size: 1.16rem;
+      line-height: 1.35;
     }
 
     .maniglia-drag,
@@ -712,20 +712,20 @@
     }
 
     .checkbox-label input[type="checkbox"] {
-      width: 30px;
-      height: 30px;
+      width: 24px;
+      height: 24px;
     }
 
     .maniglia-elemento-drag {
-      min-width: 58px;
-      min-height: 58px;
-      font-size: 1.35rem;
+      min-width: 46px;
+      min-height: 46px;
+      font-size: 1.05rem;
     }
 
     .azioni-elemento .bottone {
-      min-height: 64px;
-      font-size: 1rem;
-      padding: 14px 18px;
+      min-height: 54px;
+      font-size: 0.92rem;
+      padding: 11px 14px;
     }
   }
 </style>
