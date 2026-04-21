@@ -456,8 +456,9 @@
 
   @media (max-width: 720px) {
     .pagina {
-      width: min(100% - 14px, 1100px);
-      padding-top: 14px;
+      width: min(100% - 10px, 1100px);
+      padding-top: 10px;
+      padding-bottom: 22px;
     }
 
     .crea-lista,
@@ -467,6 +468,7 @@
 
     .lista-header {
       flex-direction: column;
+      gap: 18px;
     }
 
     .lista-azioni {
@@ -486,6 +488,8 @@
 
     .elemento {
       align-items: start;
+      gap: 14px;
+      padding: 16px 18px;
     }
 
     .dialogo-azioni .bottone {
@@ -493,14 +497,181 @@
     }
 
     body {
-      font-size: 19px;
+      font-size: 21px;
+    }
+
+    .intestazione {
+      margin-bottom: 18px;
+    }
+
+    .intestazione h1 {
+      font-size: clamp(2.7rem, 10vw, 3.5rem);
+      line-height: 1.02;
+    }
+
+    .intestazione p {
+      font-size: 1.14rem;
+      line-height: 1.6;
+    }
+
+    .lista-header h2 {
+      font-size: 1.6rem;
+    }
+
+    .lista-meta,
+    .messaggio,
+    .messaggio-vuoto,
+    .controllo-colore {
+      font-size: 1.06rem;
+    }
+
+    .crea-lista,
+    .lista-contenuto {
+      padding-top: 20px;
+      padding-bottom: 20px;
     }
 
     .lista-header,
     .lista-contenuto,
     .crea-lista {
-      padding-left: 18px;
-      padding-right: 18px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .input-testo {
+      min-height: 60px;
+      padding: 16px 18px;
+      font-size: 1rem;
+    }
+
+    .bottone {
+      min-height: 58px;
+      padding: 14px 20px;
+      font-size: 1rem;
+    }
+
+    .checkbox-label input[type="checkbox"] {
+      width: 24px;
+      height: 24px;
+    }
+
+    .maniglia-drag {
+      min-width: 50px;
+      min-height: 50px;
+      font-size: 1.3rem;
+    }
+
+    .maniglia-elemento-drag {
+      min-width: 40px;
+      min-height: 40px;
+      font-size: 1.1rem;
+    }
+
+    .azioni-secondarie,
+    .strumenti {
+      gap: 10px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    body {
+      font-size: 22px;
+    }
+
+    .pagina {
+      width: calc(100% - 8px);
+      padding-top: 8px;
+      padding-bottom: 18px;
+    }
+
+    .intestazione h1 {
+      font-size: clamp(2.9rem, 12vw, 3.7rem);
+    }
+
+    .intestazione p {
+      font-size: 1.18rem;
+    }
+
+    .strumenti,
+    .azioni-secondarie,
+    .lista-azioni,
+    .lista-controlli,
+    .dialogo-azioni {
+      flex-direction: column;
+      align-items: stretch;
+      width: 100%;
+    }
+
+    .controllo-colore {
+      justify-content: space-between;
+      width: 100%;
+      padding: 10px 14px;
+      font-size: 1rem;
+    }
+
+    .input-colore {
+      width: 40px;
+      height: 40px;
+    }
+
+    .lista-header,
+    .lista-contenuto,
+    .crea-lista {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .lista-header {
+      padding-top: 18px;
+      padding-bottom: 14px;
+    }
+
+    .lista-contenuto,
+    .crea-lista {
+      padding-top: 18px;
+      padding-bottom: 18px;
+    }
+
+    .bottone,
+    .lista-azioni .bottone,
+    .azioni-secondarie .bottone,
+    .strumenti .bottone,
+    .dialogo-azioni .bottone {
+      width: 100%;
+      min-height: 60px;
+      justify-content: center;
+    }
+
+    .aggiungi-elemento {
+      gap: 10px;
+    }
+
+    .elemento {
+      flex-direction: column;
+      align-items: stretch;
+      padding: 16px;
+    }
+
+    .elemento-primario {
+      width: 100%;
+      align-items: flex-start;
+    }
+
+    .azioni-elemento {
+      width: 100%;
+    }
+
+    .azioni-elemento .bottone {
+      flex: 1 1 auto;
+    }
+
+    .checkbox-label {
+      align-items: flex-start;
+    }
+
+    .maniglia-drag,
+    .maniglia-elemento-drag {
+      align-self: flex-start;
     }
   }
 </style>
