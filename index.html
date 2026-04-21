@@ -488,8 +488,9 @@
 
     .elemento {
       align-items: start;
-      gap: 14px;
-      padding: 16px 18px;
+      gap: 20px;
+      padding: 24px 24px;
+      min-height: 132px;
     }
 
     .dialogo-azioni .bottone {
@@ -552,8 +553,8 @@
     }
 
     .checkbox-label input[type="checkbox"] {
-      width: 28px;
-      height: 28px;
+      width: 34px;
+      height: 34px;
     }
 
     .maniglia-drag {
@@ -563,9 +564,19 @@
     }
 
     .maniglia-elemento-drag {
-      min-width: 46px;
-      min-height: 46px;
-      font-size: 1.24rem;
+      min-width: 60px;
+      min-height: 60px;
+      font-size: 1.45rem;
+    }
+
+    .nome-elemento {
+      font-size: 1.32rem;
+      line-height: 1.45;
+    }
+
+    .azioni-elemento .bottone {
+      min-height: 62px;
+      font-size: 1.04rem;
     }
 
     .azioni-secondarie,
@@ -656,13 +667,15 @@
     .elemento {
       flex-direction: column;
       align-items: stretch;
-      padding: 18px;
-      gap: 16px;
+      padding: 28px 24px;
+      gap: 22px;
+      min-height: 170px;
     }
 
     .elemento-primario {
       width: 100%;
       align-items: flex-start;
+      gap: 16px;
     }
 
     .azioni-elemento {
@@ -679,13 +692,29 @@
     }
 
     .nome-elemento {
-      font-size: 1.08rem;
+      font-size: 1.48rem;
       line-height: 1.5;
     }
 
     .maniglia-drag,
     .maniglia-elemento-drag {
       align-self: flex-start;
+    }
+
+    .checkbox-label input[type="checkbox"] {
+      width: 38px;
+      height: 38px;
+    }
+
+    .maniglia-elemento-drag {
+      min-width: 68px;
+      min-height: 68px;
+      font-size: 1.6rem;
+    }
+
+    .azioni-elemento .bottone {
+      min-height: 72px;
+      font-size: 1.08rem;
     }
   }
 </style>
