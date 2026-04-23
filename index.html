@@ -86,9 +86,16 @@
 
   .strumenti {
     display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
+    flex-wrap: nowrap;
+    gap: 8px;
     margin-bottom: 18px;
+  }
+
+  .strumenti .bottone {
+    flex: 1 1 0;
+    min-height: 34px;
+    padding: 7px 10px;
+    font-size: 0.78rem;
   }
 
   .liste-vuote {
@@ -140,6 +147,11 @@
     gap: 8px;
   }
 
+  .lista-azioni {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
   .azioni-elemento {
     flex-wrap: nowrap;
     align-items: center;
@@ -149,8 +161,8 @@
   .lista-controlli {
     display: flex;
     align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
+    gap: 8px;
+    flex-wrap: nowrap;
   }
 
   .controllo-colore {
@@ -173,27 +185,6 @@
     border: 0;
     background: transparent;
     cursor: pointer;
-  }
-
-  .maniglia-drag {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 44px;
-    min-height: 44px;
-    padding: 10px 12px;
-    border-radius: 999px;
-    border: 1px dashed rgba(32, 48, 64, 0.2);
-    background: rgba(255, 255, 255, 0.82);
-    color: var(--text-soft);
-    font-size: 1.15rem;
-    font-weight: 700;
-    cursor: grab;
-    user-select: none;
-  }
-
-  .maniglia-drag:active {
-    cursor: grabbing;
   }
 
   .lista.trascinata {
@@ -222,7 +213,16 @@
   }
 
   .azioni-secondarie {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
     margin-bottom: 16px;
+  }
+
+  .azioni-secondarie .bottone {
+    min-height: 34px;
+    padding: 7px 8px;
+    font-size: 0.76rem;
   }
 
   .lista-elementi {
@@ -365,6 +365,13 @@
     box-shadow: 0 8px 16px rgba(32, 48, 64, 0.08);
   }
 
+  .bottone:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+
   .bottone:focus-visible {
     outline: 3px solid rgba(31, 111, 139, 0.24);
     outline-offset: 2px;
@@ -399,8 +406,10 @@
   }
 
   .bottone-icona {
-    min-width: 44px;
-    padding-inline: 12px;
+    min-width: 28px;
+    min-height: 28px;
+    padding: 4px;
+    border-radius: 8px;
   }
 
   .azioni-elemento .bottone {
@@ -410,6 +419,14 @@
     font-size: 0.95rem;
     line-height: 1;
     border-radius: 10px;
+  }
+
+  .lista-azioni .bottone-icona {
+    min-width: 28px;
+    min-height: 28px;
+    padding: 4px;
+    font-size: 0.8rem;
+    line-height: 1;
   }
 
   .messaggio {
@@ -490,18 +507,12 @@
     }
 
     .lista-azioni {
-      width: 100%;
+      width: auto;
     }
 
     .lista-controlli {
-      width: 100%;
-      justify-content: space-between;
-    }
-
-    .lista-azioni .bottone,
-    .azioni-secondarie .bottone,
-    .strumenti .bottone {
-      flex: 1 1 auto;
+      width: auto;
+      justify-content: flex-end;
     }
 
     .elemento {
@@ -576,12 +587,6 @@
       height: 20px;
     }
 
-    .maniglia-drag {
-      min-width: 42px;
-      min-height: 42px;
-      font-size: 1.1rem;
-    }
-
     .maniglia-elemento-drag {
       min-width: 34px;
       min-height: 34px;
@@ -602,7 +607,26 @@
 
     .azioni-secondarie,
     .strumenti {
-      gap: 12px;
+      gap: 6px;
+    }
+
+    .strumenti .bottone {
+      min-height: 30px;
+      padding: 6px 8px;
+      font-size: 0.68rem;
+    }
+
+    .azioni-secondarie .bottone {
+      min-height: 32px;
+      padding: 6px 8px;
+      font-size: 0.7rem;
+    }
+
+    .lista-azioni .bottone-icona {
+      min-width: 26px;
+      min-height: 26px;
+      padding: 3px;
+      font-size: 0.74rem;
     }
   }
 
@@ -625,14 +649,31 @@
       font-size: 0.98rem;
     }
 
-    .strumenti,
-    .azioni-secondarie,
-    .lista-azioni,
-    .lista-controlli,
     .dialogo-azioni {
       flex-direction: column;
       align-items: stretch;
       width: 100%;
+    }
+
+    .strumenti {
+      flex-direction: row;
+      align-items: stretch;
+      width: 100%;
+      gap: 6px;
+    }
+
+    .azioni-secondarie {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      width: 100%;
+      gap: 6px;
+    }
+
+    .lista-azioni,
+    .lista-controlli {
+      flex-direction: row;
+      align-items: center;
+      width: auto;
+      gap: 4px;
     }
 
     .controllo-colore {
@@ -666,13 +707,26 @@
     }
 
     .bottone,
-    .lista-azioni .bottone,
-    .azioni-secondarie .bottone,
-    .strumenti .bottone,
     .dialogo-azioni .bottone {
       width: 100%;
       min-height: 50px;
       justify-content: center;
+    }
+
+    .strumenti .bottone,
+    .azioni-secondarie .bottone {
+      width: auto;
+      min-height: 30px;
+      padding: 6px 8px;
+      font-size: 0.66rem;
+    }
+
+    .lista-azioni .bottone-icona {
+      width: auto;
+      min-width: 24px;
+      min-height: 24px;
+      padding: 3px;
+      font-size: 0.72rem;
     }
 
     .input-testo {
@@ -717,7 +771,6 @@
       line-height: 1.25;
     }
 
-    .maniglia-drag,
     .maniglia-elemento-drag {
       align-self: center;
     }
@@ -1043,8 +1096,6 @@
     sezione.className = "lista";
     sezione.dataset.index = String(indiceLista);
     applicaStileLista(sezione, lista.colore);
-    sezione.addEventListener("dragover", (event) => gestisciDragOverLista(event, indiceLista));
-    sezione.addEventListener("drop", (event) => gestisciDropLista(event, indiceLista));
 
     const header = document.createElement("div");
     header.className = "lista-header";
@@ -1075,25 +1126,32 @@
     inputColore.addEventListener("change", () => aggiornaColoreLista(indiceLista, inputColore.value));
 
     selettoreColore.appendChild(inputColore);
-
-    const manigliaDrag = document.createElement("span");
-    manigliaDrag.className = "maniglia-drag";
-    manigliaDrag.textContent = "≡";
-    manigliaDrag.draggable = true;
-    manigliaDrag.tabIndex = 0;
-    manigliaDrag.setAttribute("role", "button");
-    manigliaDrag.setAttribute("aria-label", `Trascina per riordinare la lista ${lista.nome}`);
-    manigliaDrag.title = "Trascina per riordinare";
-    manigliaDrag.addEventListener("dragstart", (event) => avviaTrascinamentoLista(event, indiceLista));
-    manigliaDrag.addEventListener("dragend", fineTrascinamentoLista);
-
-    controlliLista.append(selettoreColore, manigliaDrag);
+    controlliLista.append(selettoreColore);
 
     const azioniLista = document.createElement("div");
     azioniLista.className = "lista-azioni";
+
+    const bottoneSu = creaBottone(
+      "↑",
+      "bottone bottone-secondario bottone-icona",
+      () => spostaListaDi(indiceLista, -1),
+      `Sposta in alto la lista ${lista.nome}`
+    );
+    bottoneSu.disabled = indiceLista === 0;
+
+    const bottoneGiu = creaBottone(
+      "↓",
+      "bottone bottone-secondario bottone-icona",
+      () => spostaListaDi(indiceLista, 1),
+      `Sposta in basso la lista ${lista.nome}`
+    );
+    bottoneGiu.disabled = indiceLista === stato.liste.length - 1;
+
     azioniLista.append(
-      creaBottone("Modifica", "bottone bottone-secondario", () => modLista(indiceLista)),
-      creaBottone("Elimina", "bottone bottone-pericolo", () => delLista(indiceLista))
+      bottoneSu,
+      bottoneGiu,
+      creaBottone("✎", "bottone bottone-secondario bottone-icona", () => modLista(indiceLista), `Modifica lista ${lista.nome}`),
+      creaBottone("🗑", "bottone bottone-pericolo bottone-icona", () => delLista(indiceLista), `Elimina lista ${lista.nome}`)
     );
 
     const azioniHeader = document.createElement("div");
@@ -1333,6 +1391,18 @@
 
   function aggiornaColoreLista(indiceLista, colore) {
     stato.liste[indiceLista].colore = normalizzaColore(colore, stato.liste[indiceLista].colore);
+    salva();
+    render();
+  }
+
+  function spostaListaDi(indiceLista, direzione) {
+    const nuovoIndice = indiceLista + direzione;
+    if (nuovoIndice < 0 || nuovoIndice >= stato.liste.length) {
+      return;
+    }
+
+    const [listaSpostata] = stato.liste.splice(indiceLista, 1);
+    stato.liste.splice(nuovoIndice, 0, listaSpostata);
     salva();
     render();
   }
