@@ -416,7 +416,7 @@
     min-width: 34px;
     min-height: 34px;
     padding: 6px;
-    font-size: 0.95rem;
+    font-size: 1.45rem;
     line-height: 1;
     border-radius: 10px;
   }
@@ -425,7 +425,7 @@
     min-width: 28px;
     min-height: 28px;
     padding: 4px;
-    font-size: 0.8rem;
+    font-size: 1.35rem;
     line-height: 1;
   }
 
@@ -602,7 +602,7 @@
       min-width: 30px;
       min-height: 30px;
       padding: 4px;
-      font-size: 0.85rem;
+      font-size: 1.2rem;
     }
 
     .azioni-secondarie,
@@ -626,7 +626,7 @@
       min-width: 26px;
       min-height: 26px;
       padding: 3px;
-      font-size: 0.74rem;
+      font-size: 1.1rem;
     }
   }
 
@@ -726,7 +726,7 @@
       min-width: 24px;
       min-height: 24px;
       padding: 3px;
-      font-size: 0.72rem;
+      font-size: 1rem;
     }
 
     .input-testo {
@@ -790,7 +790,7 @@
       min-width: 28px;
       min-height: 28px;
       padding: 3px;
-      font-size: 0.8rem;
+      font-size: 1.05rem;
     }
   }
 </style>
@@ -1180,9 +1180,10 @@
     });
 
     const bottoneAggiungi = creaBottone(
-      "Aggiungi",
-      "bottone bottone-primario",
-      () => aggiungiElemento(indiceLista, inputElemento)
+      "+",
+      "bottone bottone-primario bottone-icona",
+      () => aggiungiElemento(indiceLista, inputElemento),
+      `Aggiungi elemento alla lista ${lista.nome}`
     );
 
     aggiungiBox.append(inputElemento, bottoneAggiungi);
