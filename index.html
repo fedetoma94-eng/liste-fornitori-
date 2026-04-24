@@ -118,6 +118,14 @@
     transition: transform 0.16s ease, box-shadow 0.16s ease, opacity 0.16s ease;
   }
 
+  .lista.compressa .lista-contenuto {
+    display: none;
+  }
+
+  .lista.compressa .lista-header {
+    border-bottom: 0;
+  }
+
   .lista-header {
     display: flex;
     justify-content: space-between;
@@ -208,8 +216,21 @@
   .aggiungi-elemento {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
     gap: 14px;
     margin-bottom: 16px;
+  }
+
+  .aggiungi-elemento .bottone {
+    justify-self: end;
+  }
+
+  .aggiungi-elemento .bottone-icona {
+    min-width: 42px;
+    min-height: 42px;
+    padding: 4px;
+    font-size: 2rem;
+    line-height: 1;
   }
 
   .azioni-secondarie {
@@ -404,7 +425,7 @@
     min-width: 34px;
     min-height: 34px;
     padding: 4px;
-    font-size: 2.1rem;
+    font-size: 2.8rem;
     line-height: 1;
   }
 
@@ -574,7 +595,7 @@
       min-width: 34px;
       min-height: 34px;
       padding: 4px;
-      font-size: 1.7rem;
+      font-size: 2.2rem;
     }
 
     .azioni-secondarie,
@@ -598,7 +619,7 @@
       min-width: 30px;
       min-height: 30px;
       padding: 3px;
-      font-size: 1.6rem;
+      font-size: 2.3rem;
     }
 
     .aggiungi-elemento {
@@ -712,7 +733,7 @@
       min-width: 30px;
       min-height: 30px;
       padding: 3px;
-      font-size: 1.45rem;
+      font-size: 2rem;
     }
 
     .input-testo {
@@ -767,7 +788,7 @@
       min-width: 34px;
       min-height: 34px;
       padding: 3px;
-      font-size: 1.45rem;
+      font-size: 1.9rem;
     }
 
     .aggiungi-elemento .bottone {
@@ -775,7 +796,7 @@
       min-width: 38px;
       min-height: 38px;
       padding: 3px;
-      font-size: 1.5rem;
+      font-size: 1.9rem;
       line-height: 1;
     }
   }
@@ -909,6 +930,7 @@
     return {
       nome,
       colore: normalizzaColore(lista.colore, colorePredefinito(indice)),
+      compressa: Boolean(lista.compressa),
       elementi
     };
   }
@@ -1079,7 +1101,7 @@
 
   function creaSchedaLista(lista, indiceLista) {
     const sezione = document.createElement("section");
-    sezione.className = "lista";
+    sezione.className = `lista${lista.compressa ? " compressa" : ""}`;
     sezione.dataset.index = String(indiceLista);
     applicaStileLista(sezione, lista.colore);
 
@@ -1133,11 +1155,21 @@
     );
     bottoneGiu.disabled = indiceLista === stato.liste.length - 1;
 
+    const bottoneComprimi = creaBottone(
+      lista.compressa ? "▸" : "▾",
+      "bottone bottone-secondario bottone-icona",
+      () => toggleCompressioneLista(indiceLista),
+      lista.compressa
+        ? `Espandi la lista ${lista.nome}`
+        : `Comprimi la lista ${lista.nome}`
+    );
+
     azioniLista.append(
       bottoneSu,
       bottoneGiu,
       creaBottone("✎", "bottone bottone-secondario bottone-icona", () => modLista(indiceLista), `Modifica lista ${lista.nome}`),
-      creaBottone("🗑", "bottone bottone-pericolo bottone-icona", () => delLista(indiceLista), `Elimina lista ${lista.nome}`)
+      creaBottone("🗑", "bottone bottone-pericolo bottone-icona", () => delLista(indiceLista), `Elimina lista ${lista.nome}`),
+      bottoneComprimi
     );
 
     const azioniHeader = document.createElement("div");
@@ -1290,6 +1322,7 @@
     stato.liste.push({
       nome,
       colore: colorePredefinito(stato.liste.length),
+      compressa: false,
       elementi: []
     });
 
@@ -1299,6 +1332,12 @@
     nomeListaInput.value = "";
     nomeListaInput.focus();
     mostraMessaggio(`Lista "${nome}" creata.`);
+  }
+
+  function toggleCompressioneLista(indiceLista) {
+    stato.liste[indiceLista].compressa = !stato.liste[indiceLista].compressa;
+    salva();
+    render();
   }
 
   function esportaListe() {
